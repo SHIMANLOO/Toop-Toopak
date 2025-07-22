@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  font-family: "Segoe UI" , tahoma , Geneva , Verdana , sans-serif;
+}
+#message {
+  color: #fff;
+  margin: 20px 0;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+#game {
+  width: 400px;
+  height: 500px;
+  border: 3px solid #4cc9f0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  cursor: pointer;
+}
+/* Hide cursor during gameplay */
+body.game-started {
+  cursor: none;
+}
+#ball {
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 30% 30%, #ff0055, #b0003a);
+  position: absolute;
+  border-radius: 50%;
+  top: 400px;
+  left: 190px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  display: none;
+}
+.block {
+  width: 400px;
+  height: 20px;
+  background: linear-gradient(to right, #457b9d,#1d3557);
+  position: absolute;
+  border-radius: 10px;
+}
+.hole {
+  width:40px;
+  height: 20px;
+  background-color: #f8f9fa;
+  position: absolute;
+  border-radius: 0 0 10px 10px;
+}
+#countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5rem;
+  font-weight: bold;
+  color: #ff0055;
+  text-shadow: 0 0 10px rgba(255, 0, 85, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 20;
+}
